@@ -1,0 +1,23 @@
+.modal
+	+position(0, 0, $p: fixed)
+	+size(100%)
+	background: rgba($black, .3)
+	visibility: hidden
+	&__close
+		+position(15px, 25px)
+		+font(.9rem, $font-2, $c: $white)
+		background: $dark
+		box-shadow: $shadow-2
+		cursor: pointer
+		padding: 10px
+	&__content
+		+position(50%, 50%)
+		background: $white
+		box-shadow: $shadow-1
+		padding: 25px
+		transform: translate(50%, -50%) scale(0)
+		transition: 350ms
+	&--visible
+		visibility: visible
+		.modal__content
+			transform: translate(50%, -50%)

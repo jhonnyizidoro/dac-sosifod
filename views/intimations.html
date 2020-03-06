@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>SOSIFOD</title>
+	<meta charset="UTF-8">
+	<link rel='shortcut icon' href='/favicon.ico'>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+	<link href="/css/app.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+	<div class="container navbar__container">
+		<a class="navbar__image__link" href="/views/intimations.html">
+			<img class="navbar__image" src="/images/logo-simple.svg" alt="Logo SOSIFOD" title="Logo SOSIFOD">
+		</a>
+		<div class="navbar__links">
+			<span class="navbar__link" data-target="intimation">NOVA INTIMAÇÃO</span>
+			<span class="navbar__link" data-target="officer">CADASTRAR OFICIAL DE JUSTIÇA</span>
+			<a class="navbar__link" href="/views/login.html">SAIR</a>
+		</div>
+	</div>
+</nav>
+<!-- NAVBAR END -->
+
+<div class="container">
+
+	<!-- TABLE -->
+	<table class="table">
+		<tr class="table__row">
+			<td class="table__cell">
+				<strong class="table__strong">Data</strong>
+			</td>
+			<td class="table__cell">
+				<strong class="table__strong">Intimado</strong>
+			</td>
+			<td class="table__cell">
+				<strong class="table__strong">Oficial de justiça</strong>
+			</td>
+			<td class="table__cell">
+				<strong class="table__strong">Origem</strong>
+			</td>
+			<td class="table__cell">
+				<strong class="table__strong">Ações</strong>
+			</td>
+		</tr>
+		<tr class="table__row">
+			<td class="table__cell">
+				<span class="table__text">01/01/2000 08:00</span>
+			</td>
+			<td class="table__cell">
+				<span class="table__text">João da Silva Oliveira</span>
+			</td>
+			<td class="table__cell">
+				<span class="table__text">Steve José Carlos</span>
+			</td>
+			<td class="table__cell">
+				<span class="table__text">SIJOGA</span>
+			</td>
+			<td class="table__cell">
+				<span class="table__link" data-target="intimation">visualizar</span>
+				<span class="table__link" data-target="intimation">editar</span>
+			</td>
+		</tr>
+	</table>
+	<!-- TABLE END -->
+
+</div>
+
+<!-- MODALS -->
+
+<!-- INTIMATION MODAL -->
+<div class="modal" id="intimation">
+	<span class="modal__close">FECHAR</span>
+	<div class="modal__content">
+		<form class="default">
+			<input class="default__input" type="text" name="cpf" placeholder="CPF" data-mask="000.000.000-00">
+			<input class="default__input" type="text" name="name" placeholder="NOME">
+			<input class="default__input" type="text" name="address" placeholder="ENDEREÇO">
+			<input class="default__input" type="text" name="process" placeholder="PROCESSO">
+			<select class="default__select" name="officer">
+				<option value="">OFICIAL DE JUSTIÇA</option>
+			</select>
+			<button class="button button--primary" type="submit">CADASTRAR INTIMAÇÃO</button>
+		</form>
+	</div>
+</div>
+<!-- INTIMATION MODAL END -->
+
+<!-- OFFICER MODAL -->
+<div class="modal" id="officer">
+	<span class="modal__close">FECHAR</span>
+	<div class="modal__content">
+		<form class="default">
+			<input class="default__input" type="text" name="name" placeholder="NOME">
+			<input class="default__input" type="text" name="cpf" placeholder="CPF" data-mask="000.000.000-00">
+			<input class="default__input" type="text" name="email" placeholder="EMAIL">
+			<button class="button button--primary" type="submit">CADASTRAR OFICIAL DE JUSTIÇA</button>
+		</form>
+	</div>
+</div>
+<!-- OFFICER MODAL END -->
+
+<!-- MODALS END -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.3/imask.min.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

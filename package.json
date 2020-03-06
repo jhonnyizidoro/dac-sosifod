@@ -1,0 +1,17 @@
+{
+  "name": "dac-sosifod",
+  "version": "1.0.0",
+  "description": "SOSIFOD Sistema Juridico",
+  "main": "index.js",
+  "scripts": {
+    "watch": "gulp server"
+  },
+  "author": "Jhonny Izidoro Menarim",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-webserver": "^0.9.1",
+    "pump": "^3.0.0"
+  }
+}
