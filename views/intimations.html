@@ -58,9 +58,9 @@
 			<td class="table__cell">
 				<span class="table__text">SIJOGA</span>
 			</td>
-			<td class="table__cell">
-				<span class="table__link" data-target="intimation">visualizar</span>
+			<td class="table__cell" data-intimation='{"id": 1,"cpf": "123.123.123-00","name": "João da Silva Oliveira","address": "Av. Vicente Machado 999","process": "123555","officer": 1}'>
 				<span class="table__link" data-target="intimation">editar</span>
+				<a class="table__link" href="#">concluir</a>
 			</td>
 		</tr>
 	</table>
@@ -75,14 +75,16 @@
 	<span class="modal__close">FECHAR</span>
 	<div class="modal__content">
 		<form class="default">
+			<input type="hidden" name="id">
 			<input class="default__input" type="text" name="cpf" placeholder="CPF" data-mask="000.000.000-00">
 			<input class="default__input" type="text" name="name" placeholder="NOME">
 			<input class="default__input" type="text" name="address" placeholder="ENDEREÇO">
 			<input class="default__input" type="text" name="process" placeholder="PROCESSO">
 			<select class="default__select" name="officer">
 				<option value="">OFICIAL DE JUSTIÇA</option>
+				<option value="1">Steve José Carlos</option>
 			</select>
-			<button class="button button--primary" type="submit">CADASTRAR INTIMAÇÃO</button>
+			<button class="button button--primary" type="submit">SALVAR INTIMAÇÃO</button>
 		</form>
 	</div>
 </div>

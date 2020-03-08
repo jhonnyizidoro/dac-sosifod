@@ -4,7 +4,10 @@ const initModals = () => {
 
 	closeButtons.forEach(closeButton => {
 		closeButton.addEventListener('click', () => {
-			closeButton.parentElement.classList.remove('modal--visible')
+			const modal = closeButton.parentElement
+			const form = modal.querySelector('form')
+			modal.classList.remove('modal--visible')
+			form.reset()
 		})
 	})
 
@@ -21,7 +24,26 @@ const initMasks = () => {
 	inputs.forEach(input => new IMask(input, {mask: input.dataset.mask}))
 }
 
+const editModal = () => {
+	const triggers = document.querySelectorAll('[data-intimation]')
+	const modal = document.querySelector('#intimation')
+	const form = modal.querySelector('form')
+
+	triggers.forEach(trigger => {
+		trigger.addEventListener('click', () => {
+			const intimation = JSON.parse(trigger.dataset.intimation)
+			form.querySelector('[name="id"]').value = intimation.id
+			form.querySelector('[name="cpf"]').value = intimation.cpf
+			form.querySelector('[name="name"]').value = intimation.name
+			form.querySelector('[name="address"]').value = intimation.address
+			form.querySelector('[name="process"]').value = intimation.process
+			form.querySelector('[name="officer"]').selectedIndex = intimation.officer
+		})
+	})
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	initModals()
 	initMasks()
+	editModal()
 })
